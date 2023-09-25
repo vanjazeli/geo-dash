@@ -1,0 +1,186 @@
+{
+	"continents": {
+		"europe": [
+			{
+				"name": "Albania",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Flag_of_Albania.svg/1280px-Flag_of_Albania.svg.png"
+			},
+			{
+				"name": "Andorra",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Flag_of_Andorra.svg/1280px-Flag_of_Andorra.svg.png"
+			},
+			{
+				"name": "Austria",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Austria.svg/1920px-Flag_of_Austria.svg.png"
+			},
+			{
+				"name": "Belarus",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Flag_of_Belarus.svg/1920px-Flag_of_Belarus.svg.png"
+			},
+			{
+				"name": "Belgium",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Flag_of_Belgium.svg/1024px-Flag_of_Belgium.svg.png"
+			},
+			{
+				"name": "Bosnia and Herzegovina",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Flag_of_Bosnia_and_Herzegovina.svg/1920px-Flag_of_Bosnia_and_Herzegovina.svg.png"
+			},
+			{
+				"name": "Bulgaria",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Flag_of_Bulgaria.svg/1920px-Flag_of_Bulgaria.svg.png"
+			},
+			{
+				"name": "Croatia",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Flag_of_Croatia.svg/1920px-Flag_of_Croatia.svg.png"
+			},
+			{
+				"name": "Cyprus",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Flag_of_Cyprus.svg/1920px-Flag_of_Cyprus.svg.png"
+			},
+			{
+				"name": "Czech Republic",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/1920px-Flag_of_the_Czech_Republic.svg.png"
+			},
+			{
+				"name": "Denmark",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Flag_of_Denmark.svg/1280px-Flag_of_Denmark.svg.png"
+			},
+			{
+				"name": "Estonia",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Flag_of_Estonia.svg/1920px-Flag_of_Estonia.svg.png"
+			},
+			{
+				"name": "Finland",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_Finland.svg/1920px-Flag_of_Finland.svg.png"
+			},
+			{
+				"name": "France",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/c/c3/Flag_of_France.svg/1920px-Flag_of_France.svg.png"
+			},
+			{
+				"name": "Germany",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Flag_of_Germany.svg/1920px-Flag_of_Germany.svg.png"
+			},
+			{
+				"name": "Greece",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Greece.svg/1920px-Flag_of_Greece.svg.png"
+			},
+			{
+				"name": "Hungary",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Flag_of_Hungary.svg/1920px-Flag_of_Hungary.svg.png"
+			},
+			{
+				"name": "Iceland",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Flag_of_Iceland.svg/1280px-Flag_of_Iceland.svg.png"
+			},
+			{
+				"name": "Ireland",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Flag_of_Ireland.svg/1920px-Flag_of_Ireland.svg.png"
+			},
+			{
+				"name": "Italy",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/1920px-Flag_of_Italy.svg.png"
+			},
+			{
+				"name": "Latvia",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Flag_of_Latvia.svg/1920px-Flag_of_Latvia.svg.png"
+			},
+			{
+				"name": "Liechtenstein",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Flag_of_Liechtenstein.svg/1920px-Flag_of_Liechtenstein.svg.png"
+			},
+			{
+				"name": "Lithuania",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Flag_of_Lithuania.svg/1920px-Flag_of_Lithuania.svg.png"
+			},
+			{
+				"name": "Luxembourg",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Flag_of_Luxembourg.svg/1920px-Flag_of_Luxembourg.svg.png"
+			},
+			{
+				"name": "Malta",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Malta.svg/1920px-Flag_of_Malta.svg.png"
+			},
+			{
+				"name": "Moldova",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Flag_of_Moldova.svg/1920px-Flag_of_Moldova.svg.png"
+			},
+			{
+				"name": "Monaco",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/1280px-Flag_of_Monaco.svg.png"
+			},
+			{
+				"name": "Montenegro",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/1920px-Flag_of_Montenegro.svg.png"
+			},
+			{
+				"name": "Netherlands",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1920px-Flag_of_the_Netherlands.svg.png"
+			},
+			{
+				"name": "North Macedonia",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Flag_of_North_Macedonia.svg/1920px-Flag_of_North_Macedonia.svg.png"
+			},
+			{
+				"name": "Norway",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Flag_of_Norway.svg/1280px-Flag_of_Norway.svg.png"
+			},
+			{
+				"name": "Poland",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/1/12/Flag_of_Poland.svg/1920px-Flag_of_Poland.svg.png"
+			},
+			{
+				"name": "Portugal",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Flag_of_Portugal.svg/1920px-Flag_of_Portugal.svg.png"
+			},
+			{
+				"name": "Romania",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Flag_of_Romania.svg/1920px-Flag_of_Romania.svg.png"
+			},
+			{
+				"name": "Russia",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1920px-Flag_of_Russia.svg.png"
+			},
+			{
+				"name": "San Marino",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Flag_of_San_Marino.svg/1280px-Flag_of_San_Marino.svg.png"
+			},
+			{
+				"name": "Serbia",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1920px-Flag_of_Serbia.svg.png"
+			},
+			{
+				"name": "Slovakia",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Flag_of_Slovakia.svg/1920px-Flag_of_Slovakia.svg.png"
+			},
+			{
+				"name": "Slovenia",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Flag_of_Slovenia.svg/1920px-Flag_of_Slovenia.svg.png"
+			},
+			{
+				"name": "Spain",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Bandera_de_Espa%C3%B1a.svg/1920px-Bandera_de_Espa%C3%B1a.svg.png"
+			},
+			{
+				"name": "Sweden",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/1920px-Flag_of_Sweden.svg.png"
+			},
+			{
+				"name": "Switzerland",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Flag_of_Switzerland_%28Pantone%29.svg/1024px-Flag_of_Switzerland_%28Pantone%29.svg.png"
+			},
+			{
+				"name": "Ukraine",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/49/Flag_of_Ukraine.svg/1920px-Flag_of_Ukraine.svg.png"
+			},
+			{
+				"name": "United Kingdom",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1920px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
+			},
+			{
+				"name": "Vatican City",
+				"flagUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Flag_of_Vatican_City_State_-_2023_version.svg/1024px-Flag_of_Vatican_City_State_-_2023_version.svg.png"
+			}
+		]
+	}
+}
