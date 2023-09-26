@@ -1,5 +1,9 @@
 function App() {
-	return <>Geo Dash</>;
+  return (
+    <>
+			Geo Dash
+    </>
+  );
 }
 
 export default App;
