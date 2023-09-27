@@ -5,13 +5,21 @@ type LoadingState = {
 };
 
 const initialState: LoadingState = {
-	value: false,
+	value: true,
 };
 
 const loadingSlice = createSlice({
 	name: 'loading',
 	initialState,
-	reducers: {},
+	reducers: {
+		setLoadingOn: (state) => {
+			state.value = true;
+		},
+		setLoadingOff: (state) => {
+			state.value = false;
+		},
+	},
 });
 
+export const { setLoadingOn, setLoadingOff } = loadingSlice.actions;
 export default loadingSlice.reducer;
