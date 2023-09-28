@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from "react-redux";
 import { setLoadingOff } from "./store/slices/loadingSlice";
 
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Loader from "./components/ui/Loader";
+import IndexPage from './components/pages/IndexPage';
 
 import fetchData from "./services/fetchData";
 
@@ -23,10 +25,11 @@ function App() {
 	}, []);
 
   return (
-    <>
-			Geo Dash
-			{isLoading && <Loader/>}
-    </>
+		<BrowserRouter>
+			<Routes>
+				<Route path="/" element={<IndexPage/>}/>
+			</Routes>
+		</BrowserRouter>
   );
 }
 
