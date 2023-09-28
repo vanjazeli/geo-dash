@@ -1,6 +1,8 @@
 const IndexPage = () => {
 	return (
-		<>testing</>
+		<>
+			Geo Dash
+		</>
 	);
 }
 
