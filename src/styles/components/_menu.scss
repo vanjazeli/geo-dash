@@ -1,0 +1,52 @@
+// ========================================
+// menu
+// ========================================
+
+.menu__heading {
+	font-size: 80px;
+	margin-bottom: 20px;
+	text-align: center;
+	color: $white;
+}
+
+.menu__fact {
+	@include flex-c-c;
+	flex-direction: column;
+	margin-bottom: 40px;
+}
+
+.menu__fact-heading {
+	font-size: 32px;
+	color: $gray-mid;
+	margin-bottom: 10px;
+}
+
+.menu__fact-description {
+	font-size: 24px;
+	color: $gray-mid;
+	text-align: center;
+}
+
+.menu__list {
+	> :not(:last-child) {
+		margin-bottom: 20px;
+	}
+}
+
+.menu__link {
+	padding: 16px;
+	font-size: 32px;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	background-color: $white;
+	color: $black;
+	border-radius: 5px;
+}
+
+.menu__message {
+	display: block;
+	font-size: 24px;
+	color: $white;
+	text-align: center;
+}
