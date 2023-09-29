@@ -1,4 +1,178 @@
 {
+	"funFacts": [
+		{
+			"country": "Japan",
+			"fact": "Japan has one of the highest life expectancy rates in the world, with an average of over 84 years."
+		},
+		{
+			"country": "Australia",
+			"fact": "Australia is home to the world's largest coral reef system, the Great Barrier Reef."
+		},
+		{
+			"country": "France",
+			"fact": "The Eiffel Tower in Paris was originally intended to be a temporary structure for the 1889 World's Fair."
+		},
+		{
+			"country": "Canada",
+			"fact": "Canada has more lakes than any other country in the world."
+		},
+		{
+			"country": "Brazil",
+			"fact": "Brazil is the largest producer of coffee in the world."
+		},
+		{
+			"country": "South Africa",
+			"fact": "South Africa is home to the world's largest brewing company, SABMiller."
+		},
+		{
+			"country": "India",
+			"fact": "India is the birthplace of chess and the game of Snakes and Ladders."
+		},
+		{
+			"country": "Norway",
+			"fact": "Norway is famous for its stunning fjords, which are deep, narrow inlets of the sea."
+		},
+		{
+			"country": "Egypt",
+			"fact": "The Great Pyramid of Giza in Egypt is one of the Seven Wonders of the Ancient World."
+		},
+		{
+			"country": "Mexico",
+			"fact": "Mexico is the birthplace of chocolate, which was first developed by the ancient Mayans."
+		},
+		{
+			"country": "China",
+			"fact": "China is home to the world's largest population, with over 1.4 billion people."
+		},
+		{
+			"country": "Greece",
+			"fact": "Greece is known for its rich history and is often called the cradle of Western civilization."
+		},
+		{
+			"country": "Russia",
+			"fact": "Russia is the largest country in the world by land area, spanning 11 time zones."
+		},
+		{
+			"country": "Argentina",
+			"fact": "Argentina is famous for tango dancing, a passionate and elegant form of dance."
+		},
+		{
+			"country": "New Zealand",
+			"fact": "New Zealand is known for its stunning natural landscapes, including the Lord of the Rings filming locations."
+		},
+		{
+			"country": "Iceland",
+			"fact": "Iceland is home to some of the world's most active volcanoes and geysers."
+		},
+		{
+			"country": "Kenya",
+			"fact": "Kenya is famous for its wildlife, including the Big Five: lions, elephants, buffaloes, leopards, and rhinoceroses."
+		},
+		{
+			"country": "Switzerland",
+			"fact": "Switzerland is known for its precision watchmaking and delicious Swiss chocolates."
+		},
+		{
+			"country": "South Korea",
+			"fact": "South Korea is the world leader in esports, with a huge following for competitive video gaming."
+		},
+		{
+			"country": "Spain",
+			"fact": "Spain is famous for its siestas, short afternoon naps, which are part of the Spanish culture."
+		},
+		{
+			"country": "Peru",
+			"fact": "Peru is home to Machu Picchu, an ancient Inca citadel that's a UNESCO World Heritage site."
+		},
+		{
+			"country": "Netherlands",
+			"fact": "The Netherlands is known for its extensive network of canals and windmills."
+		},
+		{
+			"country": "Thailand",
+			"fact": "Thailand is famous for its delicious street food, including dishes like pad Thai and green curry."
+		},
+		{
+			"country": "Jamaica",
+			"fact": "Jamaica is the birthplace of reggae music and the legendary Bob Marley."
+		},
+		{
+			"country": "Sweden",
+			"fact": "Sweden is famous for its tradition of fika, a coffee break with friends accompanied by pastries."
+		},
+		{
+			"country": "Switzerland",
+			"fact": "Switzerland has a policy of armed neutrality and has not been involved in a foreign war since 1815."
+		},
+		{
+			"country": "Ireland",
+			"fact": "Ireland is known for its lush green landscapes and is often called the Emerald Isle."
+		},
+		{
+			"country": "Cuba",
+			"fact": "Cuba is famous for its vintage cars, many of which are still in use due to trade restrictions."
+		},
+		{
+			"country": "Chile",
+			"fact": "Chile is home to the Atacama Desert, one of the driest places on Earth."
+		},
+		{
+			"country": "Greece",
+			"fact": "The Olympic Games, which originated in ancient Greece, were revived in Athens in 1896."
+		},
+		{
+			"country": "Canada",
+			"fact": "Canada is the second-largest country in the world but has a population smaller than California."
+		},
+		{
+			"country": "Mexico",
+			"fact": "Mexico introduced chocolate, chilies, and corn to the world."
+		},
+		{
+			"country": "Brazil",
+			"fact": "Brazil is home to the Amazon Rainforest, which is often referred to as the 'Lungs of the Earth.'"
+		},
+		{
+			"country": "South Africa",
+			"fact": "South Africa is known for its diverse wildlife, including the majestic African elephant."
+		},
+		{
+			"country": "India",
+			"fact": "India is the world's largest producer of spices, producing over 70% of the world's spices."
+		},
+		{
+			"country": "Norway",
+			"fact": "Norway is famous for its stunning Northern Lights, also known as the Aurora Borealis."
+		},
+		{
+			"country": "Egypt",
+			"fact": "The ancient Egyptians invented a writing system called hieroglyphics."
+		},
+		{
+			"country": "China",
+			"fact": "China is home to the Great Wall, which is over 13,000 miles long and took centuries to build."
+		},
+		{
+			"country": "Argentina",
+			"fact": "Argentina is famous for its beef, and it's one of the world's top beef-exporting countries."
+		},
+		{
+			"country": "New Zealand",
+			"fact": "New Zealand was the first country to grant women the right to vote in 1893."
+		},
+		{
+			"country": "Iceland",
+			"fact": "Iceland is known for its belief in elves and hidden people, a part of Icelandic folklore."
+		},
+		{
+			"country": "Kenya",
+			"fact": "Kenya is home to the Maasai Mara, one of the world's most famous safari destinations."
+		},
+		{
+			"country": "South Korea",
+			"fact": "South Korea is known for its innovative technology companies"
+		}
+	],
 	"quizes": [
 		{
 			"name": "Europe",
