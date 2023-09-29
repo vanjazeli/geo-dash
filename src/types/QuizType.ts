@@ -1,4 +1,4 @@
-export type Quiz = {
+export type QuizType = {
 	name: string;
 	flagUrl: string;
-}
+};
