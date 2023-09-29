@@ -170,7 +170,79 @@
 		},
 		{
 			"country": "South Korea",
-			"fact": "South Korea is known for its innovative technology companies"
+			"fact": "South Korea is known for its innovative technology companies."
+		},
+		{
+			"country": "United States",
+			"fact": "The United States is the birthplace of the internet and the Silicon Valley tech hub."
+		},
+		{
+			"country": "United Kingdom",
+			"fact": "The United Kingdom is famous for its royal family and historic landmarks like Big Ben."
+		},
+		{
+			"country": "Germany",
+			"fact": "Germany is known for its beer culture and hosts the annual Oktoberfest festival."
+		},
+		{
+			"country": "Italy",
+			"fact": "Italy is the birthplace of pizza and pasta, two beloved global dishes."
+		},
+		{
+			"country": "Spain",
+			"fact": "Spain is famous for its Flamenco music and dance, a passionate art form."
+		},
+		{
+			"country": "South Africa",
+			"fact": "South Africa is home to Table Mountain, one of the New7Wonders of Nature."
+		},
+		{
+			"country": "Australia",
+			"fact": "Australia is the world's largest island, often referred to as the 'island continent.'"
+		},
+		{
+			"country": "Canada",
+			"fact": "Canada is home to the longest coastline in the world, stretching over 202,000 kilometers."
+		},
+		{
+			"country": "Russia",
+			"fact": "Russia has a vast Trans-Siberian Railway, the longest continuous railway line in the world."
+		},
+		{
+			"country": "China",
+			"fact": "China is known for its rich cultural history, including the art of Chinese calligraphy."
+		},
+		{
+			"country": "Japan",
+			"fact": "Japan is famous for its cherry blossom festivals, known as 'sakura' season."
+		},
+		{
+			"country": "India",
+			"fact": "India is home to the majestic Taj Mahal, a UNESCO World Heritage site."
+		},
+		{
+			"country": "France",
+			"fact": "France is known for its world-class cuisine, including escargot and coq au vin."
+		},
+		{
+			"country": "Mexico",
+			"fact": "Mexico is home to ancient Mayan ruins like Chichen Itza, a UNESCO World Heritage site."
+		},
+		{
+			"country": "Brazil",
+			"fact": "Brazil is famous for its Carnival festival, a colorful and lively celebration."
+		},
+		{
+			"country": "Egypt",
+			"fact": "Egypt is home to the Nile River, one of the world's longest rivers."
+		},
+		{
+			"country": "Greece",
+			"fact": "Greece has numerous picturesque islands, including Santorini and Mykonos."
+		},
+		{
+			"country": "Thailand",
+			"fact": "Thailand is known for its stunning temples, including Wat Pho and Wat Arun."
 		}
 	],
 	"quizes": [

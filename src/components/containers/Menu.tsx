@@ -12,23 +12,24 @@ type MenuPropsType = {
 const Menu = ({ heading, funFact, items }: MenuPropsType) => {
 	return (
 		<div className="menu">
-			<h1 className="menu__heading">{heading}</h1>
+			<h1 className="menu__heading text-large">{heading}</h1>
 			{funFact && (
 				<div className="menu__fact">
-					<span className="menu__fact-heading">Fun fact about {funFact.country}:</span>
-					<span className="menu__fact-description">{funFact.fact}</span>
+					<span className="menu__fact-heading text-middle">Fun fact about {funFact.country}:</span>
+					<span className="menu__fact-description text-small">{funFact.fact}</span>
 				</div>
 			)}
-			<ul className="menu__list">
-				{items?.map((item, itemIndex) => (
-					<li className="menu__item" key={itemIndex}>
-						<Link className="menu__link hover-default" to={`/${item.flagUrl}`}>
-							{item.name}
-						</Link>
-					</li>
-				))}
-				{!items && <span className="menu__message">No quizes are currently available.</span>}
-			</ul>
+			{items && (
+				<ul className="menu__list">
+					{items?.map((item, itemIndex) => (
+						<li className="menu__item" key={itemIndex}>
+							<Link className="menu__link text-middle hover-default" to={`/${item.flagUrl}`}>
+								{item.name}
+							</Link>
+						</li>
+					))}
+				</ul>
+			)}
 		</div>
 	);
 };

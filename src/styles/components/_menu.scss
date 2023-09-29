@@ -3,7 +3,6 @@
 // ========================================
 
 .menu__heading {
-	font-size: 80px;
 	margin-bottom: 20px;
 	text-align: center;
 	color: $white;
@@ -16,13 +15,11 @@
 }
 
 .menu__fact-heading {
-	font-size: 32px;
 	color: $gray-mid;
 	margin-bottom: 10px;
 }
 
 .menu__fact-description {
-	font-size: 24px;
 	color: $gray-mid;
 	text-align: center;
 }
@@ -35,7 +32,6 @@
 
 .menu__link {
 	padding: 16px;
-	font-size: 32px;
 	display: inline-block;
 	width: 100%;
 	text-align: center;
