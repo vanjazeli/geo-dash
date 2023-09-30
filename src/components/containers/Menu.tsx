@@ -20,15 +20,18 @@ const Menu = ({ heading, funFact, items }: MenuPropsType) => {
 				</div>
 			)}
 			{items && (
-				<ul className="menu__list">
-					{items?.map((item, itemIndex) => (
-						<li className="menu__item" key={itemIndex}>
-							<Link className="menu__link text-middle hover-default" to={`/${item.flagUrl}`}>
-								{item.name}
-							</Link>
-						</li>
-					))}
-				</ul>
+				<>
+					<h3 className="menu__subheading text-middle">Quiz list:</h3>
+					<ul className="menu__list">
+						{items?.map((item, itemIndex) => (
+							<li className="menu__item" key={itemIndex}>
+								<Link className="menu__link text-middle hover-default" to={`/${item.name.toLowerCase()}`}>
+									{item.name}
+								</Link>
+							</li>
+						))}
+					</ul>
+				</>
 			)}
 		</div>
 	);

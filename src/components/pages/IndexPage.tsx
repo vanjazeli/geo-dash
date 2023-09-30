@@ -18,7 +18,6 @@ const IndexPage = ({ quizes }: IndexPageProps) => {
 			const randomIndex = Math.floor(Math.random() * data.length);
 			setFunFact(data[randomIndex]);
 		});
-		return setFunFact(null);
 	}, []);
 
 	return (
@@ -28,7 +27,7 @@ const IndexPage = ({ quizes }: IndexPageProps) => {
 					<img className="page-wrap__background" src="images/world-map.svg" alt="background" />
 				</div>
 				<div className="page-wrap__wrap">
-					<Menu heading="Quiz Name" funFact={funFact} items={quizes} />
+					<Menu heading="Geo Dash" funFact={funFact} items={quizes} />
 				</div>
 			</div>
 		</>
