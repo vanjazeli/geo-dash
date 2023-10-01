@@ -12,7 +12,7 @@ type MenuPropsType = {
 const Menu = ({ heading, funFact, items }: MenuPropsType) => {
 	return (
 		<div className="menu">
-			<h1 className="menu__heading text-large">{heading}</h1>
+			{heading && <h1 className="menu__heading text-large">{heading}</h1>}
 			{funFact && (
 				<div className="menu__fact">
 					<span className="menu__fact-heading text-middle">Fun fact about {funFact.country}:</span>
