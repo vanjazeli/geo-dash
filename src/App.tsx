@@ -32,6 +32,9 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<IndexPage quizes={quizes} />} />
+					{quizes?.map((quiz, quizIndex) => (
+						<Route path={`/${quiz.name}`} element={<FlagQuizPage quiz={quiz} />} key={quizIndex} />
+					))}
 				</Routes>
 			</BrowserRouter>
 		</>
