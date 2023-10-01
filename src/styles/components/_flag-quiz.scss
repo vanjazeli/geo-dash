@@ -1,0 +1,28 @@
+// ========================================
+// flag-quiz
+// ========================================
+
+.flag-quiz__question {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.flag-quiz__image-wrap {
+	min-height: 370px;
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.flag-quiz__image {
+	width: 100%;
+}
+
+.flag-quiz__info {
+	@include flex-sb-c;
+	margin-bottom: 20px;
+}
+
+.flag-quiz__input {
+	margin-bottom: 20px;
+}
