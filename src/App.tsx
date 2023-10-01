@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { setLoadingOff } from './store/slices/loadingSlice';
+import { setLoadingOff, setLoadingOn } from './store/slices/loadingSlice';
 
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Loader from './components/ui/Loader';
 import IndexPage from './components/pages/IndexPage';
+import FlagQuizPage from './components/pages/FlagQuizPage';
 
 import fetchData from './services/fetchData';
 
@@ -18,6 +19,7 @@ function App() {
 	const [quizes, setQuizes] = useState<QuizType[] | null>(null);
 
 	useEffect(() => {
+		dispatch(setLoadingOn());
 		fetchData('http://localhost:8001/quizes', (data) => {
 			setQuizes(data);
 			dispatch(setLoadingOff());

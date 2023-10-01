@@ -5,7 +5,7 @@ type LoadingState = {
 };
 
 const initialState: LoadingState = {
-	value: true,
+	value: false,
 };
 
 const loadingSlice = createSlice({
