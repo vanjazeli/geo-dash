@@ -25,7 +25,7 @@ const Menu = ({ heading, funFact, items }: MenuPropsType) => {
 					<ul className="menu__list">
 						{items?.map((item, itemIndex) => (
 							<li className="menu__item" key={itemIndex}>
-								<Link className="menu__link text-middle hover-default" to={`/${item.name.toLowerCase()}`}>
+								<Link className="cta-primary text-small hover-default" to={`/${item.name.toLowerCase()}`}>
 									{item.name}
 								</Link>
 							</li>

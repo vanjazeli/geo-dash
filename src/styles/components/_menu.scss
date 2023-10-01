@@ -5,7 +5,6 @@
 .menu__heading {
 	margin-bottom: 20px;
 	text-align: center;
-	color: $white;
 }
 
 .menu__fact {
@@ -26,7 +25,6 @@
 }
 
 .menu__subheading {
-	color: $white;
 	margin-bottom: 20px;
 	text-align: center;
 }
@@ -37,19 +35,8 @@
 	}
 }
 
-.menu__link {
-	padding: 16px;
-	display: inline-block;
-	width: 100%;
-	text-align: center;
-	background-color: $white;
-	color: $black;
-	border-radius: 5px;
-}
-
 .menu__message {
 	display: block;
 	font-size: 24px;
-	color: $white;
 	text-align: center;
 }
