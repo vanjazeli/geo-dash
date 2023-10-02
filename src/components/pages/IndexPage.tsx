@@ -3,11 +3,11 @@ import fetchData from '../../services/fetchData';
 
 import Menu from '../containers/Menu';
 
-import { QuizType } from '../../types/QuizType';
 import { FunFactType } from '../../types/FunFactType';
+import { Quiz } from '../../types/QuizType';
 
 type IndexPageProps = {
-	quizes: QuizType[] | null;
+	quizes: Quiz[] | null;
 };
 
 const IndexPage = ({ quizes }: IndexPageProps) => {

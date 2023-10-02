@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 
-import { QuizType } from '../../types/QuizType';
+import { Quiz } from '../../types/QuizType';
 import { FunFactType } from '../../types/FunFactType';
 
 type MenuPropsType = {
 	heading: string;
 	funFact?: FunFactType | null;
-	items: QuizType[] | null;
+	items: Quiz[] | null;
 };
 
 const Menu = ({ heading, funFact, items }: MenuPropsType) => {

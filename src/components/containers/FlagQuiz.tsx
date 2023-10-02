@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-import { QuizType } from '../../types/QuizType';
+import { QuizType } from '../../types/QuizQuestionType';
 import shuffleArray from '../../services/shuffleArray';
 
 type FlagQuizProps = {

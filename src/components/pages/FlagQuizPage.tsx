@@ -1,6 +1,6 @@
 import FlagQuiz from '../containers/FlagQuiz';
 
-import { QuizType } from '../../types/QuizType';
+import { QuizType } from '../../types/QuizQuestionType';
 
 type FlagQuizPageProps = {
 	quiz: QuizType;

@@ -9,14 +9,14 @@ import FlagQuizPage from './components/pages/FlagQuizPage';
 
 import fetchData from './services/fetchData';
 
-import { QuizType } from './types/QuizType';
+import { Quiz } from './types/QuizType';
 import { RootState } from './store/store';
 
 function App() {
 	const isLoading = useSelector((state: RootState) => state.loading.value);
 	const dispatch = useDispatch();
 
-	const [quizes, setQuizes] = useState<QuizType[] | null>(null);
+	const [quizes, setQuizes] = useState<Quiz[] | null>(null);
 
 	useEffect(() => {
 		dispatch(setLoadingOn());

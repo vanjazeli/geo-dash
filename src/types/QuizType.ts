@@ -1,4 +1,6 @@
-export type QuizType = {
+import { QuizQuestion } from './QuizQuestionType';
+
+export type Quiz = {
 	name: string;
-	flagUrl: string;
+	questions: QuizQuestion[];
 };
