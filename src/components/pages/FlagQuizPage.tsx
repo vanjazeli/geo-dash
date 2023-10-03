@@ -1,9 +1,9 @@
 import FlagQuiz from '../containers/FlagQuiz';
 
-import { QuizType } from '../../types/QuizQuestionType';
+import { Quiz } from '../../types/QuizType';
 
 type FlagQuizPageProps = {
-	quiz: QuizType;
+	quiz: Quiz;
 };
 
 const FlagQuizPage = ({ quiz }: FlagQuizPageProps) => {
@@ -14,7 +14,7 @@ const FlagQuizPage = ({ quiz }: FlagQuizPageProps) => {
 					<img className="page-wrap__background" src="images/world-map.svg" alt="background" />
 				</div>
 				<div className="page-wrap__wrap">
-					<FlagQuiz quiz={quiz} />
+					<FlagQuiz sentence="Which country's flag is showing below?" quiz={quiz} />
 				</div>
 			</div>
 		</>
