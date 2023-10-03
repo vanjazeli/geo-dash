@@ -1,38 +1,65 @@
-import { useEffect, useRef } from 'react';
-
-import { QuizType } from '../../types/QuizQuestionType';
+import { useEffect, useRef, useState } from 'react';
 import shuffleArray from '../../services/shuffleArray';
+import formatStats from '../../services/formatStats';
+import capitalizeEachWord from '../../services/capitalizeEachWord';
+
+import { Quiz } from '../../types/QuizType';
+import { QuizQuestion } from '../../types/QuizQuestionType';
 
 type FlagQuizProps = {
-	quiz: QuizType;
+	sentence: string;
+	quiz: Quiz;
 };
 
-const FlagQuiz = ({ quiz }: FlagQuizProps) => {
-	const inputRef = useRef<HTMLInputElement | null>(null);
+const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
+	const shuffledQuiz = useRef(shuffleArray(quiz.questions));
+
+	const currentQuestionIndex = useRef(0);
+
+	const [currentQuestion, setCurrentQuestion] = useState<QuizQuestion>(shuffledQuiz.current[currentQuestionIndex.current]);
+	const [stats, setStats] = useState(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
+
+	const [inputQuery, setInputQuery] = useState('');
+
+	const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+		setInputQuery(capitalizeEachWord(e.target.value));
+	};
+
+	const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+		if (inputQuery.toLowerCase() === currentQuestion.name.toLowerCase() && currentQuestionIndex.current < shuffledQuiz.current.length - 1) {
+			currentQuestionIndex.current += 1;
+			setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
+			setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
+		} else {
+			alert('done');
+		}
+		setInputQuery('');
+	};
+
+	const inputEl = useRef<HTMLInputElement | null>(null);
 
 	useEffect(() => {
-		(inputRef.current as HTMLInputElement).focus();
+		if (inputEl.current) {
+			inputEl.current.focus();
+		}
 	}, []);
-
-	const stats = `02/23`;
 
 	return (
 		<div className="flag-quiz">
-			<p className="flag-quiz__question text-middle">Which country's flag is showing below?</p>
+			<p className="flag-quiz__question text-middle">{sentence}</p>
 			<div className="flag-quiz__holder">
 				<div className="flag-quiz__image-wrap">
-					<img className="flag-quiz__image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/1920px-Flag_of_Serbia.svg.png" alt="Country Flag" />
+					<img className="flag-quiz__image" src={currentQuestion.flagUrl} alt="Country Flag" />
 				</div>
 				<div className="flag-quiz__info">
 					<span className="text-middle">{quiz.name}</span>
 					<span className="text-middle">{stats}</span>
 				</div>
-				<div className="flag-quiz__form">
-					<input className="flag-quiz__input input-primary text-small" type="text" ref={inputRef} spellCheck="false" />
-					<button className="flag-quiz__button cta-primary text-small hover-default" type="button">
-						Submit
-					</button>
-				</div>
+				<form className="flag-quiz__form" action="submit" onSubmit={submitHandler}>
+					<input className="flag-quiz__input input-primary text-small" type="text" spellCheck="false" value={inputQuery} onChange={changeHandler} ref={inputEl} />
+					<button className="flag-quiz__button cta-primary text-small hover-default">Continue</button>
+				</form>
 			</div>
 		</div>
 	);
