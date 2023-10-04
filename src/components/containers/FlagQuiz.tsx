@@ -3,6 +3,8 @@ import shuffleArray from '../../services/shuffleArray';
 import formatStats from '../../services/formatStats';
 import capitalizeEachWord from '../../services/capitalizeEachWord';
 
+import { Link, useNavigate } from 'react-router-dom';
+
 import { Quiz } from '../../types/QuizType';
 import { QuizQuestion } from '../../types/QuizQuestionType';
 
@@ -12,6 +14,8 @@ type FlagQuizProps = {
 };
 
 const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
+	const navigate = useNavigate();
+
 	const shuffledQuiz = useRef(shuffleArray(quiz.questions));
 
 	const currentQuestionIndex = useRef(0);
@@ -31,8 +35,13 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 			currentQuestionIndex.current += 1;
 			setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
 			setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
-		} else {
-			alert('done');
+		}
+		if (inputQuery.toLowerCase() !== currentQuestion.name.toLocaleLowerCase()) {
+			alert('wrong answer!');
+		}
+		if (currentQuestionIndex.current === shuffledQuiz.current.length - 1) {
+			alert('No more questions!');
+			navigate('/');
 		}
 		setInputQuery('');
 	};
@@ -60,6 +69,9 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 					<input className="flag-quiz__input input-primary text-small" type="text" spellCheck="false" value={inputQuery} onChange={changeHandler} ref={inputEl} />
 					<button className="flag-quiz__button cta-primary text-small hover-default">Continue</button>
 				</form>
+				<Link className="flag-quiz__return cta-secondary text-small hover-default" to="/">
+					Return to Menu
+				</Link>
 			</div>
 		</div>
 	);

@@ -11,3 +11,20 @@
 	color: $black;
 	border-radius: 5px;
 }
+
+.cta-primary--short {
+	width: unset;
+}
+
+.cta-secondary {
+	padding: 12px;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+	color: $white;
+	text-decoration: underline;
+}
+
+.cta-secondary--short {
+	width: unset;
+}
