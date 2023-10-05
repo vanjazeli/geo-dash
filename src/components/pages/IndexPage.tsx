@@ -22,14 +22,7 @@ const IndexPage = ({ quizes }: IndexPageProps) => {
 
 	return (
 		<>
-			<div className="page-wrap">
-				<div className="page-wrap__background-wrap">
-					<img className="page-wrap__background" src="images/world-map.svg" alt="background" />
-				</div>
-				<div className="page-wrap__wrap">
-					<Menu heading="Geo Dash" funFact={funFact} items={quizes} />
-				</div>
-			</div>
+			<Menu heading="Geo Dash" funFact={funFact} items={quizes} />
 		</>
 	);
 };
