@@ -12,6 +12,11 @@
 	border-radius: 5px;
 }
 
+.cta-primary--inverse {
+	background-color: $black;
+	color: $white;
+}
+
 .cta-primary--short {
 	width: unset;
 }
