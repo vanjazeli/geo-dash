@@ -4,6 +4,13 @@
 
 body {
 	color: $white;
+	opacity: 0;
+	background-color: $black;
+	&.loaded {
+		transition: $transition-primary;
+		transition-property: opacity;
+		opacity: 1;
+	}
 }
 
 #root {
