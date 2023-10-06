@@ -9,6 +9,7 @@ body {
 	&.loaded {
 		transition: $transition-primary;
 		transition-property: opacity;
+		transition-delay: 0.5s;
 		opacity: 1;
 	}
 }
