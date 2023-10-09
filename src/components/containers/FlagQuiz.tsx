@@ -3,6 +3,7 @@ import shuffleArray from '../../services/shuffleArray';
 import formatStats from '../../services/formatStats';
 import capitalizeEachWord from '../../services/capitalizeEachWord';
 
+import ResultModal from './ResultModal';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { Quiz } from '../../types/QuizType';
@@ -18,12 +19,26 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 
 	const shuffledQuiz = useRef(shuffleArray(quiz.questions));
 
-	const currentQuestionIndex = useRef(0);
-
+	const currentQuestionIndex = useRef(42);
 	const [currentQuestion, setCurrentQuestion] = useState<QuizQuestion>(shuffledQuiz.current[currentQuestionIndex.current]);
 	const [stats, setStats] = useState(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
-
 	const [inputQuery, setInputQuery] = useState('');
+	const wrongAnswers = useRef<QuizQuestion[]>([
+		{
+			name: 'Monaco',
+			flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/1280px-Flag_of_Monaco.svg.png',
+		},
+		{
+			name: 'Montenegro',
+			flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/1920px-Flag_of_Montenegro.svg.png',
+		},
+		{
+			name: 'Netherlands',
+			flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1920px-Flag_of_the_Netherlands.svg.png',
+		},
+	]);
+
+	const [showResults, setShowResults] = useState(false);
 
 	const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setInputQuery(capitalizeEachWord(e.target.value));
@@ -31,15 +46,19 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 
 	const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		if (inputQuery.toLowerCase() === currentQuestion.name.toLowerCase() && currentQuestionIndex.current < shuffledQuiz.current.length - 1) {
+		if (inputQuery.toLowerCase() === currentQuestion.name.toLowerCase() && currentQuestionIndex.current < shuffledQuiz.current.length + 1) {
 			currentQuestionIndex.current += 1;
 			setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
 			setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
 		}
 		if (inputQuery.toLowerCase() !== currentQuestion.name.toLocaleLowerCase()) {
-			alert('wrong answer!');
+			wrongAnswers.current.push(currentQuestion);
+			console.log(wrongAnswers);
+			currentQuestionIndex.current += 1;
+			setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
+			setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
 		}
-		if (currentQuestionIndex.current === shuffledQuiz.current.length - 1) {
+		if (currentQuestionIndex.current === shuffledQuiz.current.length) {
 			alert('No more questions!');
 			navigate('/');
 		}
@@ -73,6 +92,7 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 					Return to Menu
 				</Link>
 			</div>
+			{/* <ResultModal wrongAnswers={wrongAnswers.current} /> */}
 		</div>
 	);
 };

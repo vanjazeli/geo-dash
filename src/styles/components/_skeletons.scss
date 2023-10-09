@@ -1,0 +1,81 @@
+// ========================================
+// skeletons
+// ========================================
+
+$skeleton-primary-color: $white;
+$skeleton-secondary-color: #d8d8d8;
+
+.skeleton {
+	background-color: $skeleton-primary-color;
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+	opacity: 0.8;
+	animation: skeleton 1s infinite ease-in-out;
+}
+
+@keyframes skeleton {
+	0% {
+		opacity: 0.6;
+	}
+	50% {
+		opacity: 0.8;
+	}
+	100% {
+		opacity: 0.6;
+	}
+}
+
+.fun-fact-skeleton {
+	@include flex-c-c;
+	flex-direction: column;
+	margin-bottom: 40px;
+}
+
+.fun-fact-skeleton__heading {
+	width: 70%;
+	height: 36px;
+	margin-bottom: 10px;
+}
+
+.fun-fact-skeleton__text {
+	width: 100%;
+	@include flex-c-c;
+	flex-direction: column;
+	> :not(:last-child) {
+		margin-bottom: 8px;
+	}
+	> :last-child {
+		width: 80%;
+	}
+}
+
+.fun-fact-skeleton__line {
+	width: 100%;
+	height: 24px;
+}
+
+.menu-items-skeleton {
+	@include flex-c-c;
+	flex-direction: column;
+}
+
+.menu-items-skeleton__heading {
+	height: 36px;
+	width: 70%;
+	margin-bottom: 10px;
+}
+
+.menu-items-skeleton__links {
+	width: 100%;
+	@include flex-c-c;
+	flex-direction: column;
+	> :not(:last-child) {
+		margin-bottom: 10px;
+	}
+}
+
+.menu-items-skeleton__link {
+	height: 52px;
+	width: 100%;
+}

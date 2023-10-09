@@ -2,6 +2,8 @@ import { Link } from 'react-router-dom';
 
 import { Quiz } from '../../types/QuizType';
 import { FunFactType } from '../../types/FunFactType';
+import MenuFactSkeleton from '../ui/Skeletons/MenuFactSkeleton';
+import MenuItemsSkeleton from '../ui/Skeletons/MenuItemsSkeleton';
 
 type MenuPropsType = {
 	heading: string;
@@ -15,10 +17,11 @@ const Menu = ({ heading, funFact, items }: MenuPropsType) => {
 			{heading && <h1 className="menu__heading text-large">{heading}</h1>}
 			{funFact && (
 				<div className="menu__fact">
-					<span className="menu__fact-heading text-middle">Fun fact about {funFact.country}:</span>
-					<span className="menu__fact-description text-small">{funFact.fact}</span>
+					<span className="menu__fact-heading text-middle">Fun fact about {funFact?.country}:</span>
+					<p className="menu__fact-description text-small">{funFact?.fact}</p>
 				</div>
 			)}
+			{!funFact && <MenuFactSkeleton />}
 			{items && (
 				<>
 					<h3 className="menu__subheading text-middle">Quiz list:</h3>
@@ -33,6 +36,7 @@ const Menu = ({ heading, funFact, items }: MenuPropsType) => {
 					</ul>
 				</>
 			)}
+			{!items && <MenuItemsSkeleton />}
 		</div>
 	);
 };
