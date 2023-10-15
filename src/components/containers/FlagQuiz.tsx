@@ -4,6 +4,7 @@ import formatStats from '../../services/formatStats';
 import capitalizeEachWord from '../../services/capitalizeEachWord';
 
 import ResultModal from './ResultModal';
+import FlagImageSkeleton from '../ui/Skeletons/FlagImageSkeleton';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { Quiz } from '../../types/QuizType';
@@ -15,6 +16,8 @@ type FlagQuizProps = {
 };
 
 const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
+	const [isLoading, setIsLoading] = useState(true);
+
 	const navigate = useNavigate();
 
 	const shuffledQuiz = useRef(shuffleArray(quiz.questions));
@@ -23,20 +26,7 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 	const [currentQuestion, setCurrentQuestion] = useState<QuizQuestion>(shuffledQuiz.current[currentQuestionIndex.current]);
 	const [stats, setStats] = useState(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
 	const [inputQuery, setInputQuery] = useState('');
-	const wrongAnswers = useRef<QuizQuestion[]>([
-		{
-			name: 'Monaco',
-			flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Flag_of_Monaco.svg/1280px-Flag_of_Monaco.svg.png',
-		},
-		{
-			name: 'Montenegro',
-			flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Flag_of_Montenegro.svg/1920px-Flag_of_Montenegro.svg.png',
-		},
-		{
-			name: 'Netherlands',
-			flagUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/1920px-Flag_of_the_Netherlands.svg.png',
-		},
-	]);
+	const wrongAnswers = useRef<QuizQuestion[]>([]);
 
 	const [showResults, setShowResults] = useState(false);
 
@@ -60,6 +50,7 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 		}
 		if (currentQuestionIndex.current === shuffledQuiz.current.length) {
 			alert('No more questions!');
+			setShowResults(true);
 			navigate('/');
 		}
 		setInputQuery('');
@@ -73,26 +64,54 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 		}
 	}, []);
 
+	const submitButton = useRef(null);
+
+	useEffect(() => {
+		let loadedImages = 0;
+
+		const onImageLoad = () => {
+			loadedImages++;
+			if (loadedImages === quiz.questions.length - 1) {
+				setTimeout(() => {
+					setIsLoading(false);
+					if (submitButton.current) {
+						(submitButton.current as HTMLButtonElement).removeAttribute('disabled');
+					}
+				}, 500);
+			}
+		};
+
+		const preloadImages = () => {
+			for (const question of quiz.questions) {
+				const img = new Image();
+				img.src = question.flagUrl;
+				img.onload = onImageLoad;
+			}
+		};
+
+		preloadImages();
+	}, []);
+
 	return (
 		<div className="flag-quiz">
 			<p className="flag-quiz__question text-middle">{sentence}</p>
 			<div className="flag-quiz__holder">
-				<div className="flag-quiz__image-wrap">
-					<img className="flag-quiz__image" src={currentQuestion.flagUrl} alt="Country Flag" />
-				</div>
+				<div className="flag-quiz__image-wrap">{isLoading ? <FlagImageSkeleton /> : <img className="flag-quiz__image" src={currentQuestion.flagUrl} alt="Country Flag" />}</div>
 				<div className="flag-quiz__info">
 					<span className="text-middle">{quiz.name}</span>
 					<span className="text-middle">{stats}</span>
 				</div>
 				<form className="flag-quiz__form" action="submit" onSubmit={submitHandler}>
 					<input className="flag-quiz__input input-primary text-small" type="text" spellCheck="false" value={inputQuery} onChange={changeHandler} ref={inputEl} />
-					<button className="flag-quiz__button cta-primary text-small hover-default">Continue</button>
+					<button className="flag-quiz__button cta-primary text-small hover-default" disabled ref={submitButton}>
+						Continue
+					</button>
 				</form>
 				<Link className="flag-quiz__return cta-secondary text-small hover-default" to="/">
 					Return to Menu
 				</Link>
 			</div>
-			{/* <ResultModal wrongAnswers={wrongAnswers.current} /> */}
+			{showResults && <ResultModal wrongAnswers={wrongAnswers.current} />}
 		</div>
 	);
 };
