@@ -10,7 +10,7 @@ const PageWrap = ({ children }: PageWrapProps) => {
 			<div className="page-wrap__background-wrap">
 				<img className="page-wrap__background" src="images/world-map.svg" alt="Background" />
 			</div>
-			<div className="page-wrap__wrap">{children}</div>
+			<div className="page-wrap__wrap wrap">{children}</div>
 		</div>
 	);
 };
