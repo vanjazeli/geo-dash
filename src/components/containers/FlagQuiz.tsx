@@ -5,7 +5,8 @@ import capitalizeEachWord from '../../services/capitalizeEachWord';
 
 import ResultModal from './ResultModal';
 import FlagImageSkeleton from '../ui/Skeletons/FlagImageSkeleton';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+import Modal from '../ui/Modal';
 
 import { Quiz } from '../../types/QuizType';
 import { QuizQuestion } from '../../types/QuizQuestionType';
@@ -107,11 +108,12 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 						Continue
 					</button>
 				</form>
-				<Link className="flag-quiz__return cta-secondary text-small hover-default" to="/">
+				<button className="flag-quiz__return cta-secondary text-small hover-default" type="button">
 					Return to Menu
-				</Link>
+				</button>
 			</div>
 			{showResults && <ResultModal wrongAnswers={wrongAnswers.current} />}
+			<Modal>testing</Modal>
 		</div>
 	);
 };
