@@ -1,0 +1,27 @@
+// ========================================
+// confirm
+// ========================================
+
+.confirm-panel {
+	border-radius: 5px;
+	background-color: $white;
+	width: 100%;
+}
+
+.confirm-panel__top {
+	padding: 20px;
+	@include flex-c-c;
+}
+
+.confirm-panel__message {
+	color: $black;
+	max-width: 300px;
+	text-align: center;
+}
+
+.confirm-panel__bottom {
+	padding: 20px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
