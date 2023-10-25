@@ -3,7 +3,6 @@ import shuffleArray from '../../services/shuffleArray';
 import formatStats from '../../services/formatStats';
 import capitalizeEachWord from '../../services/capitalizeEachWord';
 
-import ResultModal from './ResultModal';
 import FlagImageSkeleton from '../ui/Skeletons/FlagImageSkeleton';
 import { useNavigate } from 'react-router-dom';
 import Modal from '../ui/Modal';
@@ -24,8 +23,8 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 
 	const shuffledQuiz = useRef(shuffleArray(quiz.questions));
 
-	const currentQuestionIndex = useRef(42);
-	const [currentQuestion, setCurrentQuestion] = useState<QuizQuestion>(shuffledQuiz.current[currentQuestionIndex.current]);
+	const currentQuestionIndex = useRef(40);
+	const [currentQuestion, setCurrentQuestion] = useState<QuizQuestion>(shuffledQuiz.current[currentQuestionIndex.current - 1]);
 	const [stats, setStats] = useState(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
 	const [inputQuery, setInputQuery] = useState('');
 	const wrongAnswers = useRef<QuizQuestion[]>([]);
@@ -38,10 +37,11 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 
 	const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		if (inputQuery.toLowerCase() === currentQuestion.name.toLowerCase() && currentQuestionIndex.current < shuffledQuiz.current.length + 1) {
+		if (inputQuery.toLowerCase() === currentQuestion.name.toLowerCase() && currentQuestionIndex.current < shuffledQuiz.current.length - 1) {
 			currentQuestionIndex.current += 1;
 			setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
 			setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
+			console.log(0);
 		}
 		if (inputQuery.toLowerCase() !== currentQuestion.name.toLocaleLowerCase()) {
 			wrongAnswers.current.push(currentQuestion);
@@ -49,11 +49,11 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 			currentQuestionIndex.current += 1;
 			setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
 			setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
+			console.log(1);
 		}
 		if (currentQuestionIndex.current === shuffledQuiz.current.length) {
-			alert('No more questions!');
 			setShowResults(true);
-			navigate('/');
+			// navigate('/');
 		}
 		setInputQuery('');
 	};
@@ -127,7 +127,7 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 					Return to Menu
 				</button>
 			</div>
-			{showResults && <ResultModal wrongAnswers={wrongAnswers.current} />}
+			{showResults && <span>Testing</span>}
 			{showConfirmExit && (
 				<Modal>
 					<ConfirmPanel message="Are you sure you want to return to menu?" yesHandler={yesHandler} noHandler={noHandler} />
