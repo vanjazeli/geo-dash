@@ -10,6 +10,7 @@ import Modal from '../ui/Modal';
 
 import { Quiz } from '../../types/QuizType';
 import { QuizQuestion } from '../../types/QuizQuestionType';
+import ConfirmPanel from '../ui/ConfirmPanel';
 
 type FlagQuizProps = {
 	sentence: string;
@@ -93,6 +94,20 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 		preloadImages();
 	}, []);
 
+	const [showConfirmExit, setShowConfirmExit] = useState(false);
+
+	const returnClickHandler = () => {
+		setShowConfirmExit(true);
+	};
+
+	const yesHandler = () => {
+		navigate('/');
+	};
+
+	const noHandler = () => {
+		setShowConfirmExit(false);
+	};
+
 	return (
 		<div className="flag-quiz">
 			<p className="flag-quiz__question text-middle">{sentence}</p>
@@ -108,12 +123,16 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 						Continue
 					</button>
 				</form>
-				<button className="flag-quiz__return cta-secondary text-small hover-default" type="button">
+				<button className="flag-quiz__return cta-secondary text-small hover-default" type="button" onClick={returnClickHandler}>
 					Return to Menu
 				</button>
 			</div>
 			{showResults && <ResultModal wrongAnswers={wrongAnswers.current} />}
-			<Modal>testing</Modal>
+			{showConfirmExit && (
+				<Modal>
+					<ConfirmPanel message="Are you sure you want to return to menu?" yesHandler={yesHandler} noHandler={noHandler} />
+				</Modal>
+			)}
 		</div>
 	);
 };
