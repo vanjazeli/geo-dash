@@ -37,24 +37,43 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 
 	const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		if (inputQuery.toLowerCase() === currentQuestion.name.toLowerCase() && currentQuestionIndex.current < shuffledQuiz.current.length - 1) {
-			currentQuestionIndex.current += 1;
-			setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
-			setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
-			console.log(0);
-		}
-		if (inputQuery.toLowerCase() !== currentQuestion.name.toLocaleLowerCase()) {
-			wrongAnswers.current.push(currentQuestion);
-			console.log(wrongAnswers);
-			currentQuestionIndex.current += 1;
-			setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
-			setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
-			console.log(1);
-		}
-		if (currentQuestionIndex.current === shuffledQuiz.current.length) {
+		// if (inputQuery.toLowerCase() === currentQuestion.name.toLowerCase() && currentQuestionIndex.current < shuffledQuiz.current.length - 1) {
+		// 	currentQuestionIndex.current += 1;
+		// 	setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
+		// 	setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
+		// 	console.log(0);
+		// }
+		// if (inputQuery.toLowerCase() !== currentQuestion.name.toLowerCase()) {
+		// 	wrongAnswers.current.push(currentQuestion);
+		// 	console.log(wrongAnswers);
+		// 	currentQuestionIndex.current += 1;
+		// 	setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
+		// 	setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
+		// 	console.log(1);
+		// }
+		// if (currentQuestionIndex.current - 1 === shuffledQuiz.current.length) {
+		// 	setShowResults(true);
+		// 	console.log(2);
+		// 	// navigate('/');
+		// }
+		if (currentQuestionIndex.current + 1 < shuffledQuiz.current.length) {
+			if (inputQuery.toLowerCase() === currentQuestion.name.toLowerCase()) {
+				currentQuestionIndex.current += 1;
+				setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
+				setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
+				setInputQuery('');
+			}
+			if (inputQuery.toLowerCase() !== currentQuestion.name.toLowerCase()) {
+				wrongAnswers.current.push(currentQuestion);
+				currentQuestionIndex.current += 1;
+				setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
+				setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
+				setInputQuery('');
+			}
+		} else {
 			setShowResults(true);
-			// navigate('/');
 		}
+
 		setInputQuery('');
 	};
 
@@ -127,7 +146,11 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 					Return to Menu
 				</button>
 			</div>
-			{showResults && <span>Testing</span>}
+			{showResults && (
+				<Modal>
+					<span>Testing</span>
+				</Modal>
+			)}
 			{showConfirmExit && (
 				<Modal>
 					<ConfirmPanel message="Are you sure you want to return to menu?" yesHandler={yesHandler} noHandler={noHandler} />
