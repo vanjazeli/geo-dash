@@ -37,25 +37,6 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 
 	const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		// if (inputQuery.toLowerCase() === currentQuestion.name.toLowerCase() && currentQuestionIndex.current < shuffledQuiz.current.length - 1) {
-		// 	currentQuestionIndex.current += 1;
-		// 	setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
-		// 	setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
-		// 	console.log(0);
-		// }
-		// if (inputQuery.toLowerCase() !== currentQuestion.name.toLowerCase()) {
-		// 	wrongAnswers.current.push(currentQuestion);
-		// 	console.log(wrongAnswers);
-		// 	currentQuestionIndex.current += 1;
-		// 	setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
-		// 	setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
-		// 	console.log(1);
-		// }
-		// if (currentQuestionIndex.current - 1 === shuffledQuiz.current.length) {
-		// 	setShowResults(true);
-		// 	console.log(2);
-		// 	// navigate('/');
-		// }
 		if (currentQuestionIndex.current + 1 < shuffledQuiz.current.length) {
 			if (inputQuery.toLowerCase() === currentQuestion.name.toLowerCase()) {
 				currentQuestionIndex.current += 1;
@@ -73,7 +54,6 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 		} else {
 			setShowResults(true);
 		}
-
 		setInputQuery('');
 	};
 
