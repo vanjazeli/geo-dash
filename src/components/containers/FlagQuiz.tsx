@@ -6,10 +6,11 @@ import capitalizeEachWord from '../../services/capitalizeEachWord';
 import FlagImageSkeleton from '../ui/Skeletons/FlagImageSkeleton';
 import { useNavigate } from 'react-router-dom';
 import Modal from '../ui/Modal';
+import ResultsPanel from '../ui/ResultsPanel';
+import ConfirmPanel from '../ui/ConfirmPanel';
 
 import { Quiz } from '../../types/QuizType';
 import { QuizQuestion } from '../../types/QuizQuestionType';
-import ConfirmPanel from '../ui/ConfirmPanel';
 
 type FlagQuizProps = {
 	sentence: string;
@@ -128,7 +129,7 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 			</div>
 			{showResults && (
 				<Modal>
-					<span>Testing</span>
+					<ResultsPanel wrongAnswers={wrongAnswers.current} />
 				</Modal>
 			)}
 			{showConfirmExit && (
