@@ -53,6 +53,17 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 				setInputQuery('');
 			}
 		} else {
+			if (inputQuery.toLowerCase() === currentQuestion.name.toLowerCase()) {
+				setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
+				setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
+				setInputQuery('');
+			}
+			if (inputQuery.toLowerCase() !== currentQuestion.name.toLowerCase()) {
+				wrongAnswers.current.push(currentQuestion);
+				setCurrentQuestion(shuffledQuiz.current[currentQuestionIndex.current]);
+				setStats(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
+				setInputQuery('');
+			}
 			setShowResults(true);
 		}
 		setInputQuery('');
