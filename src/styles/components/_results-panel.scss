@@ -10,8 +10,15 @@
 	padding: 20px;
 }
 
-.results-panel__heading {
+.results-panel__score {
 	text-align: center;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.results-panel__message {
+	text-align: center;
+	display: block;
 	margin-bottom: 20px;
 }
 
