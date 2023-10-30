@@ -24,7 +24,7 @@ const FlagQuiz = ({ sentence, quiz }: FlagQuizProps) => {
 
 	const shuffledQuiz = useRef(shuffleArray(quiz.questions));
 
-	const currentQuestionIndex = useRef(43);
+	const currentQuestionIndex = useRef(0);
 	const [currentQuestion, setCurrentQuestion] = useState<QuizQuestion>(shuffledQuiz.current[currentQuestionIndex.current]);
 	const [stats, setStats] = useState(formatStats(currentQuestionIndex.current, shuffledQuiz.current.length));
 	const [inputQuery, setInputQuery] = useState('');

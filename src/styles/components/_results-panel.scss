@@ -22,6 +22,18 @@
 	margin-bottom: 20px;
 }
 
+.results-panel__message--excellent {
+	color: $green;
+}
+
+.results-panel__message--good-enough {
+	color: $orange;
+}
+
+.results-panel__message--failed {
+	color: $red;
+}
+
 .results-panel__list {
 	margin-bottom: 20px;
 	max-height: min(40vh, 700px);
