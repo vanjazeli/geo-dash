@@ -430,6 +430,59 @@
 					"flagUrl": "images/quizzes/europe/680973d9-0f22-4639-b42d-3a4c4236aae8.png"
 				}
 			]
+		},
+		{
+			"name": "South America",
+			"questions": [
+				{
+					"name": "Argentina",
+					"flagUrl": "images/quizzes/south-america/4187cf08-82fd-41c0-b699-e9cc1b01352e.png"
+				},
+				{
+					"name": "Bolivia",
+					"flagUrl": "images/quizzes/south-america/2e5065f3-8c83-4b34-acd1-8930a85b17bd.png"
+				},
+				{
+					"name": "Brazil",
+					"flagUrl": "images/quizzes/south-america/d9984966-c7b2-41ec-99f4-98b1e050a91e.png"
+				},
+				{
+					"name": "Chile",
+					"flagUrl": "images/quizzes/south-america/6327068b-1745-4881-bf4a-e5d19aa944d5.png"
+				},
+				{
+					"name": "Colombia",
+					"flagUrl": "images/quizzes/south-america/7504855d-9b9f-4b59-ba28-b4b27db89ba6.png"
+				},
+				{
+					"name": "Ecuador",
+					"flagUrl": "images/quizzes/south-america/5bf5cd85-506a-4e55-96c8-6229ac6aa219.png"
+				},
+				{
+					"name": "Guyana",
+					"flagUrl": "images/quizzes/south-america/822248e6-439b-4383-8a15-f14f85712b75.png"
+				},
+				{
+					"name": "Paraguay",
+					"flagUrl": "images/quizzes/south-america/bfeb961f-c54d-42ce-b286-34ad00a95f77.png"
+				},
+				{
+					"name": "Peru",
+					"flagUrl": "images/quizzes/south-america/c00abb1d-8be7-4f10-a659-59b78961ce8b.png"
+				},
+				{
+					"name": "Suriname",
+					"flagUrl": "images/quizzes/south-america/d2430f46-442d-4d9e-916d-44a7bcbe97ea.png"
+				},
+				{
+					"name": "Uruguay",
+					"flagUrl": "images/quizzes/south-america/6211419f-c17b-4d82-96d0-197b0ba9663c.png"
+				},
+				{
+					"name": "Venezuela",
+					"flagUrl": "images/quizzes/south-america/bde3910a-8afa-4dc1-9204-46599707c00a.png"
+				}
+			]
 		}
 	]
 }
